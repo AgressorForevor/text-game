@@ -1,9 +1,12 @@
 package com.banana.textgame;
 
+import java.util.Scanner;
+
 public class Main {
 
     /*
-     * )
+     * :с
+     */
 
     public static void main(String[] args) {
         // вызывает метод start()
@@ -25,6 +28,16 @@ public class Main {
      * Метод вызывается один раз при старте игры.
      */
     void onStart() {
+        System.out.println ("привет");
+        Scanner клавиатура = new Scanner (System.in);
+        System.out.println("Как тебя зовут?");
+       String имя = клавиатура.nextLine();
+        System.out.println("Привет," + имя);
+
+        System.out.println ("Сколько тебе лет?");
+       int возраст = клавиатура.nextInt();
+        System.out.println ("Возраст:" + возраст);;
+
 
     }
 
@@ -33,14 +46,14 @@ public class Main {
      * Единственный параметр: dayNumber - номер текущего игрового дня.
      */
     void onNewDay(int dayNumber) {
-
+    System.out.println ("бУДНИ..." + dayNumber);
     }
 
     /*
      * Метод вызывается по завершению игры.
      */
     void onFinish() {
-
+        System.out.println ("пОКИ");
     }
 
 }
