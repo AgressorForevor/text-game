@@ -36,17 +36,28 @@ public class Main {
 
         System.out.println ("Сколько тебе лет?");
        int возраст = клавиатура.nextInt();
-        System.out.println ("Возраст:" + возраст);;
+        System.out.println ("Возраст:" + возраст);
 
 
     }
-
+    int ОбщийЗаработок = 0;
     /*
      * Метод вызывается каждый игровый день.
      * Единственный параметр: dayNumber - номер текущего игрового дня.
      */
     void onNewDay(int dayNumber) {
     System.out.println ("бУДНИ..." + dayNumber);
+    Scanner клавиатура = new Scanner (System.in);
+    System.out.println("Введите код: ");
+    String код = клавиатура.nextLine();
+    код = код.trim();
+    int заработок = код.length();
+        ОбщийЗаработок = ОбщийЗаработок + заработок;
+    System.out.println("За день вы заработали:" + заработок +"$. ");
+
+
+
+
     }
 
     /*
